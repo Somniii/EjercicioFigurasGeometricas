@@ -1,0 +1,5 @@
+package p4p2;
+
+public class Rectangulo extends Cuadrilatero{
+
+}

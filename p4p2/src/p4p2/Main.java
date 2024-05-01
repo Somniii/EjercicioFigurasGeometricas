@@ -1,0 +1,35 @@
+package p4p2;
+
+import java.util.Scanner;
+
+/*Escriba una jerarquía de herencia para las clases Cuadrilatero, 
+Trapezoide, Paralelogramo, Rectangulo y Cuadrado. Use 
+Cuadrilatero como la superclase de la jerarquía. Agregue todos los 
+niveles que sea posible a la jerarquía.
+Especifique las variables de instancia y los métodos para cada 
+clase. Las variables de instancia private de Cuadrilatero
+deben ser los pares de coordenadas x-y para los cuatro puntos fi 
+nales del Cuadrilatero. Escriba un programa que cree instancias de 
+objetos de sus clases, y que imprima el área de cada objeto 
+(excepto Cuadrilatero)*/
+public class Main {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		double x1,x2,y1,y2;
+		System.out.println("Ingrese el x1 de un Cuadrilatero");
+		x1 = scan.nextDouble();
+		System.out.println("Ingrese el x2 de un Cuadrilatero");
+		x2 = scan.nextDouble();
+		System.out.println("Ingrese el y1 de un Cuadrilatero");
+		y1 = scan.nextDouble();
+		System.out.println("Ingrese el y2 de un Cuadrilatero");
+		y2 = scan.nextDouble();
+
+		if( x1 == x2 && x2 == y1 && y1 == y2) {
+			Cuadrado c1 = new Cuadrado();
+			c1.getAllCoordinates(x1, x2, y1, y2);
+			c1.verificar();
+		}
+		
+	}
+}
